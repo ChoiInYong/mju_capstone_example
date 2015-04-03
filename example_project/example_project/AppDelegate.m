@@ -28,8 +28,17 @@
     person1.age = 35;
     person1.birthDay = [NSDate createSpecificDateWithYear:1981 month:8 day:13];
 
-    [personManager printPerson:person1];
+    Person *person2 = [Person new];
+    person2.name = @"Hannah, Kim";
+    person2.age = 35;
+    person2.birthDay = [NSDate createSpecificDateWithYear:1981 month:5 day:22];
 
+    NSArray *family = @[person1, person2];
+
+    for (NSUInteger i = 0; i < [family count]; i++) {
+        Person *person = family[i];
+        [personManager printPerson:person];
+    }
 
     return YES;
 }
