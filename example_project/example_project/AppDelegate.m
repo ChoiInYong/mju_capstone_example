@@ -7,6 +7,8 @@
 //
 
 #import "AppDelegate.h"
+#import "PersonManager.h"
+#import "Person.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +19,17 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+
+    PersonManager *personManager = [[PersonManager alloc] init];
+
+    Person *person1 = [Person new];
+    person1.name = @"Kyungtaek, Lim";
+    person1.age = 35;
+    person1.birthDay = [NSDate date];
+
+    [personManager printPerson:person1];
+
+
     return YES;
 }
 

@@ -14,6 +14,7 @@
 		B3128F401ACEF194007820E9 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B3128F3F1ACEF194007820E9 /* Images.xcassets */; };
 		B3128F431ACEF194007820E9 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3128F411ACEF194007820E9 /* LaunchScreen.xib */; };
 		B3128F4F1ACEF194007820E9 /* example_projectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3128F4E1ACEF194007820E9 /* example_projectTests.m */; };
+		D86C979EC18B193799BE2DC5 /* PersonManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D86C90A635D1D4F117971D10 /* PersonManager.m */; };
 		D86C9AF7083BA08CBCFE18B4 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = D86C9CA96226B3A8D9A391A5 /* Person.m */; };
 /* End PBXBuildFile section */
 
@@ -41,6 +42,8 @@
 		B3128F481ACEF194007820E9 /* example_projectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = example_projectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B3128F4D1ACEF194007820E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B3128F4E1ACEF194007820E9 /* example_projectTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = example_projectTests.m; sourceTree = "<group>"; };
+		D86C90A635D1D4F117971D10 /* PersonManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonManager.m; sourceTree = "<group>"; };
+		D86C93BE19656BE04F5C7972 /* PersonManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonManager.h; sourceTree = "<group>"; };
 		D86C9CA96226B3A8D9A391A5 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		D86C9D8820C0C8858B4822E3 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -94,6 +97,8 @@
 				B3128F321ACEF194007820E9 /* Supporting Files */,
 				D86C9CA96226B3A8D9A391A5 /* Person.m */,
 				D86C9D8820C0C8858B4822E3 /* Person.h */,
+				D86C90A635D1D4F117971D10 /* PersonManager.m */,
+				D86C93BE19656BE04F5C7972 /* PersonManager.h */,
 			);
 			path = example_project;
 			sourceTree = "<group>";
@@ -228,6 +233,7 @@
 				B3128F381ACEF194007820E9 /* AppDelegate.m in Sources */,
 				B3128F351ACEF194007820E9 /* main.m in Sources */,
 				D86C9AF7083BA08CBCFE18B4 /* Person.m in Sources */,
+				D86C979EC18B193799BE2DC5 /* PersonManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
