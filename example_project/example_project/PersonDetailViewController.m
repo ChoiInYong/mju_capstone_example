@@ -10,9 +10,7 @@
 #import "Person.h"
 #import "NSDate+Support.h"
 
-@interface PersonDetailViewController ()
-
-@end
+static NSURLSession *gSession = nil;
 
 @implementation PersonDetailViewController
 - (instancetype)initWithPerson:(Person *)person {
@@ -33,11 +31,43 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    [self.thumbnailImageView setImage:self.person.thumbnailImage];
+    if (gSession == nil) {
+        NSURLSessionConfiguration *sessionConfiguration = [NSURLSessionConfiguration defaultSessionConfiguration];
+        NSURLSession *session = [NSURLSession sessionWithConfiguration:sessionConfiguration];
+        gSession = session;
+    }
+
     [self.nameLabel setText:self.person.name];
     [self.ageLabel setText:[NSString stringWithFormat:@"%ld살", (long) self.person.age]];
     [self.birthdayLabel setText:[self.person.birthDay shortString]];
+}
 
+
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+
+    [self requestRemoteImageDownload];
+}
+
+
+- (void) requestRemoteImageDownload {
+
+    //URL: https://lh3.googleusercontent.com/-gQk95qA9_tI/AAAAAAAAAAI/AAAAAAAAAAA/ovHoNvPFJfg/photo.jpg
+
+    NSString *imageUrlString = @"https://lh3.googleusercontent.com/-gQk95qA9_tI/AAAAAAAAAAI/AAAAAAAAAAA/ovHoNvPFJfg/photo.jpg";
+
+    //[gSession downloadTaskWithURL:[NSURL URLWithString:imageUrlString] completionHandler:]
+
+    __weak PersonDetailViewController *weakself = self;
+    NSURLSessionTask *task = [gSession dataTaskWithURL:[NSURL URLWithString:imageUrlString] completionHandler:^(NSData *data, NSURLResponse *response, NSError *error) {
+
+        UIImage *image = [[UIImage alloc] initWithData:data];
+        dispatch_async(dispatch_get_main_queue(), ^{
+            [weakself.thumbnailImageView setImage:image];
+        });
+    }];
+
+    [task resume];
 }
 
 
