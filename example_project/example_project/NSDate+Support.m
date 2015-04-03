@@ -29,5 +29,15 @@
     return [NSDate dateWithTimeInterval:seconds sinceDate:self];
 }
 
+- (NSString *)shortString {
+
+    NSDateFormatter *format = [[NSDateFormatter alloc] init];
+    [format setDateFormat:@"yyyy년 MM월 dd일"];
+    NSString *dateString = [format stringFromDate:self];
+
+    return dateString;
+
+}
+
 
 @end

@@ -11,4 +11,6 @@
 
 -(NSDate *) toLocalTime;
 
+-(NSString *)shortString;
+
 @end

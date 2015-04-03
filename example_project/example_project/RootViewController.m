@@ -59,5 +59,25 @@
     }
 }
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [self.family count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"default_cell"];
+
+    if (cell == nil) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleSubtitle reuseIdentifier:@"default_Cell"];
+    }
+
+    Person *person = [self.family objectAtIndex:indexPath.row];
+
+    [cell.textLabel setText:person.name];
+    [cell.detailTextLabel setText:[person.birthDay shortString]];
+
+    return cell;
+}
+
 
 @end
