@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "PersonManager.h"
 #import "Person.h"
+#import "NSDate+Support.h"
 
 @interface AppDelegate ()
 
@@ -25,7 +26,7 @@
     Person *person1 = [Person new];
     person1.name = @"Kyungtaek, Lim";
     person1.age = 35;
-    person1.birthDay = [NSDate date];
+    person1.birthDay = [NSDate createSpecificDateWithYear:1981 month:8 day:13];
 
     [personManager printPerson:person1];
 
