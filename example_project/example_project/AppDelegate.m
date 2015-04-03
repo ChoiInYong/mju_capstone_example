@@ -30,7 +30,14 @@
     * Make RootViewController
     */
     RootViewController *viewController = [[RootViewController alloc] initWithNibName:@"RootViewController" bundle:nil];
-    [self.window setRootViewController:viewController];
+
+    /**
+    * Make NavigationController
+    */
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:viewController];
+
+
+    [self.window setRootViewController:navigationController];
     [self.window makeKeyAndVisible];
 
     return YES;

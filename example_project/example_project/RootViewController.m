@@ -25,6 +25,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    [self.navigationItem setTitle:@"Family list"];
+
     PersonManager *personManager = [[PersonManager alloc] init];
 
     Person *person1 = [Person new];
