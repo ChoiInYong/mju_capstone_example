@@ -34,11 +34,13 @@
     person1.name = @"Kyungtaek, Lim";
     person1.age = 35;
     person1.birthDay = [NSDate createSpecificDateWithYear:1981 month:8 day:13];
+    person1.thumbnailImage = [UIImage imageNamed:@"kyungtaek.png"];
 
     Person *person2 = [Person new];
     person2.name = @"Hannah, Kim";
     person2.age = 35;
     person2.birthDay = [NSDate createSpecificDateWithYear:1981 month:5 day:22];
+    person2.thumbnailImage = [UIImage imageNamed:@"hannah.png"];
 
     NSMutableArray *family = [NSMutableArray arrayWithObjects:person1, person2, nil];
 
@@ -46,6 +48,7 @@
     person3.name = @"Hajoon, Lim";
     person3.age = 2;
     person3.birthDay = [NSDate createSpecificDateWithYear:2014 month:4 day:21];
+    person3.thumbnailImage = [UIImage imageNamed:@"hajoon.png"];
     [family addObject:person3];
 
     [self setPersonManager:personManager];

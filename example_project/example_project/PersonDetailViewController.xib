@@ -9,6 +9,7 @@
                 <outlet property="ageLabel" destination="FPf-rv-fyU" id="lML-T7-1lC"/>
                 <outlet property="birthdayLabel" destination="i14-Mj-Wuk" id="Zzn-eq-Tk6"/>
                 <outlet property="nameLabel" destination="e20-W3-j3h" id="neQ-Qu-h1h"/>
+                <outlet property="thumbnailImageView" destination="yWQ-y5-So3" id="Mep-nP-Prd"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -35,6 +36,9 @@
                     <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                     <nil key="highlightedColor"/>
                 </label>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="yWQ-y5-So3">
+                    <rect key="frame" x="26" y="99" width="149" height="147"/>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>

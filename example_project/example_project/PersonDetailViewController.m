@@ -33,6 +33,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
+    [self.thumbnailImageView setImage:self.person.thumbnailImage];
     [self.nameLabel setText:self.person.name];
     [self.ageLabel setText:[NSString stringWithFormat:@"%ld살", (long) self.person.age]];
     [self.birthdayLabel setText:[self.person.birthDay shortString]];
