@@ -13,6 +13,8 @@
 
 @interface RootViewController ()
 
+@property (nonatomic, strong) IBOutlet UITableView *tableView;
+
 @property (nonatomic, strong) PersonManager *personManager;
 @property (nonatomic, strong) NSMutableArray *family;
 

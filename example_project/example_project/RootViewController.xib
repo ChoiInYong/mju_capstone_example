@@ -6,6 +6,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RootViewController">
             <connections>
+                <outlet property="tableView" destination="L9Y-dL-UsZ" id="TWx-qa-8dk"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -14,14 +15,18 @@
             <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cYP-2j-9qo">
-                    <rect key="frame" x="137" y="269" width="39" height="30"/>
-                    <state key="normal" title="Hello!">
-                        <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                    </state>
-                </button>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="L9Y-dL-UsZ">
+                    <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="L9Y-dL-UsZ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="9KD-ak-VWg"/>
+                <constraint firstAttribute="bottom" secondItem="L9Y-dL-UsZ" secondAttribute="bottom" id="OrS-8h-fab"/>
+                <constraint firstAttribute="trailing" secondItem="L9Y-dL-UsZ" secondAttribute="trailing" id="UeN-sv-ZlH"/>
+                <constraint firstItem="L9Y-dL-UsZ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="aVP-K4-nYA"/>
+            </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
         </view>
     </objects>
