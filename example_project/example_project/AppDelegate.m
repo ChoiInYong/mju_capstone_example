@@ -33,12 +33,19 @@
     person2.age = 35;
     person2.birthDay = [NSDate createSpecificDateWithYear:1981 month:5 day:22];
 
-    NSArray *family = @[person1, person2];
+    NSMutableArray *family = [NSMutableArray arrayWithObjects:person1, person2, nil];
+
+    Person *person3 = [Person new];
+    person3.name = @"Hajoon, Lim";
+    person3.age = 2;
+    person3.birthDay = [NSDate createSpecificDateWithYear:2014 month:4 day:21];
+    [family addObject:person3];
 
     for (NSUInteger i = 0; i < [family count]; i++) {
         Person *person = family[i];
         [personManager printPerson:person];
     }
+
 
     return YES;
 }
