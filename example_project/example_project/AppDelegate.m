@@ -10,6 +10,7 @@
 #import "PersonManager.h"
 #import "Person.h"
 #import "NSDate+Support.h"
+#import "RootViewController.h"
 
 @interface AppDelegate ()
 
@@ -19,33 +20,18 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
 
-    PersonManager *personManager = [[PersonManager alloc] init];
+    /**
+    * Make KeyWindow
+    */
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
 
-    Person *person1 = [Person new];
-    person1.name = @"Kyungtaek, Lim";
-    person1.age = 35;
-    person1.birthDay = [NSDate createSpecificDateWithYear:1981 month:8 day:13];
-
-    Person *person2 = [Person new];
-    person2.name = @"Hannah, Kim";
-    person2.age = 35;
-    person2.birthDay = [NSDate createSpecificDateWithYear:1981 month:5 day:22];
-
-    NSMutableArray *family = [NSMutableArray arrayWithObjects:person1, person2, nil];
-
-    Person *person3 = [Person new];
-    person3.name = @"Hajoon, Lim";
-    person3.age = 2;
-    person3.birthDay = [NSDate createSpecificDateWithYear:2014 month:4 day:21];
-    [family addObject:person3];
-
-    for (NSUInteger i = 0; i < [family count]; i++) {
-        Person *person = family[i];
-        [personManager printPerson:person];
-    }
-
+    /**
+    * Make RootViewController
+    */
+    RootViewController *viewController = [[RootViewController alloc] initWithNibName:@"RootViewController" bundle:nil];
+    [self.window setRootViewController:viewController];
+    [self.window makeKeyAndVisible];
 
     return YES;
 }
