@@ -10,6 +10,7 @@
 #import "PersonManager.h"
 #import "Person.h"
 #import "NSDate+Support.h"
+#import "PersonDetailViewController.h"
 
 @interface RootViewController ()
 
@@ -61,6 +62,8 @@
     }
 }
 
+#pragma mark - UITableViewDatasource
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
     return [self.family count];
 }
@@ -79,6 +82,20 @@
     [cell.detailTextLabel setText:[person.birthDay shortString]];
 
     return cell;
+}
+
+
+#pragma mark - UITableViewDelegate
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
+
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+
+    Person *selectedPerson = self.family[(NSUInteger) indexPath.row];
+
+    PersonDetailViewController *personDetailViewController = [[PersonDetailViewController alloc] initWithPerson:selectedPerson];
+    [self.navigationController pushViewController:personDetailViewController animated:YES];
+
 }
 
 

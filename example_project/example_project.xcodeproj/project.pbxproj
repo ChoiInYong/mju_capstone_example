@@ -14,6 +14,8 @@
 		B3128F4F1ACEF194007820E9 /* example_projectTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B3128F4E1ACEF194007820E9 /* example_projectTests.m */; };
 		B3128F5B1ACEFC6C007820E9 /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3128F591ACEFC6C007820E9 /* RootViewController.m */; };
 		B3128F5C1ACEFC6C007820E9 /* RootViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3128F5A1ACEFC6C007820E9 /* RootViewController.xib */; };
+		B3128F601ACF03E1007820E9 /* PersonDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3128F5E1ACF03E1007820E9 /* PersonDetailViewController.m */; };
+		B3128F611ACF03E1007820E9 /* PersonDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3128F5F1ACF03E1007820E9 /* PersonDetailViewController.xib */; };
 		D86C955C314D4C7FF581E073 /* NSDate+Support.m in Sources */ = {isa = PBXBuildFile; fileRef = D86C9CE6E84FDFC4CAAC9A96 /* NSDate+Support.m */; };
 		D86C979EC18B193799BE2DC5 /* PersonManager.m in Sources */ = {isa = PBXBuildFile; fileRef = D86C90A635D1D4F117971D10 /* PersonManager.m */; };
 		D86C9AF7083BA08CBCFE18B4 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = D86C9CA96226B3A8D9A391A5 /* Person.m */; };
@@ -43,6 +45,9 @@
 		B3128F581ACEFC6C007820E9 /* RootViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RootViewController.h; sourceTree = "<group>"; };
 		B3128F591ACEFC6C007820E9 /* RootViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RootViewController.m; sourceTree = "<group>"; };
 		B3128F5A1ACEFC6C007820E9 /* RootViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RootViewController.xib; sourceTree = "<group>"; };
+		B3128F5D1ACF03E1007820E9 /* PersonDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonDetailViewController.h; sourceTree = "<group>"; };
+		B3128F5E1ACF03E1007820E9 /* PersonDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonDetailViewController.m; sourceTree = "<group>"; };
+		B3128F5F1ACF03E1007820E9 /* PersonDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PersonDetailViewController.xib; sourceTree = "<group>"; };
 		D86C90A635D1D4F117971D10 /* PersonManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PersonManager.m; sourceTree = "<group>"; };
 		D86C93BD0726A361D0CE7472 /* NSDate+Support.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Support.h"; sourceTree = "<group>"; };
 		D86C93BE19656BE04F5C7972 /* PersonManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PersonManager.h; sourceTree = "<group>"; };
@@ -104,6 +109,9 @@
 				B3128F581ACEFC6C007820E9 /* RootViewController.h */,
 				B3128F591ACEFC6C007820E9 /* RootViewController.m */,
 				B3128F5A1ACEFC6C007820E9 /* RootViewController.xib */,
+				B3128F5D1ACF03E1007820E9 /* PersonDetailViewController.h */,
+				B3128F5E1ACF03E1007820E9 /* PersonDetailViewController.m */,
+				B3128F5F1ACF03E1007820E9 /* PersonDetailViewController.xib */,
 			);
 			path = example_project;
 			sourceTree = "<group>";
@@ -214,6 +222,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B3128F611ACF03E1007820E9 /* PersonDetailViewController.xib in Resources */,
 				B3128F431ACEF194007820E9 /* LaunchScreen.xib in Resources */,
 				B3128F5C1ACEFC6C007820E9 /* RootViewController.xib in Resources */,
 				B3128F401ACEF194007820E9 /* Images.xcassets in Resources */,
@@ -236,6 +245,7 @@
 			files = (
 				B3128F5B1ACEFC6C007820E9 /* RootViewController.m in Sources */,
 				B3128F381ACEF194007820E9 /* AppDelegate.m in Sources */,
+				B3128F601ACF03E1007820E9 /* PersonDetailViewController.m in Sources */,
 				B3128F351ACEF194007820E9 /* main.m in Sources */,
 				D86C9AF7083BA08CBCFE18B4 /* Person.m in Sources */,
 				D86C979EC18B193799BE2DC5 /* PersonManager.m in Sources */,
