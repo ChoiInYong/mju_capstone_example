@@ -24,3 +24,11 @@ DerivedData
 # http://guides.cocoapods.org/using/using-cocoapods.html#should-i-ignore-the-pods-directory-in-source-control
 #
 #Pods/
+example_project/.idea/.name
+example_project/.idea/encodings.xml
+example_project/.idea/example_project.iml
+example_project/.idea/modules.xml
+example_project/.idea/vcs.xml
+example_project/.idea/workspace.xml
+example_project/.idea/xcode.xml
+example_project/.idea/scopes/scope_settings.xml
